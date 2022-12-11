@@ -26,12 +26,16 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
+
         //Note part one does not use the listview, I was just going to use the 2d array, but instead the linked list from part 2 will be used to populate it, part one sort is displayed via system out
         FileControl newFile = new FileControl();
         MrSorter newSort = new MrSorter();
+
         System.out.println(newFile.lineCount("src/Customers.txt"));
         System.out.println(Arrays.deepToString(newFile.readInCustomers("src/Customers.txt")));
         System.out.println(Arrays.deepToString(newSort.customerSort(newFile.readInCustomers("src/Customers.txt"))));
+        System.out.println(LineControl.customerInLineLinkedList((newSort.customerSort(newFile.readInCustomers("src/Customers.txt")))));
+        System.out.println(LineControl.customerInLinePriortyQueue((newSort.customerSort(newFile.readInCustomers("src/Customers.txt")))));
         launch();
     }
 }
