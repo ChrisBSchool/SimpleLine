@@ -3,6 +3,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
@@ -13,7 +14,11 @@
    <AnchorPane prefHeight="614.0" prefWidth="560.0">
       <children>
          <ListView fx:id="customerView" prefHeight="461.0" prefWidth="385.0" />
-         <Button fx:id="sort" layoutX="445.0" layoutY="14.0" mnemonicParsing="false" text="Sort" />
+         <Button fx:id="showButton" layoutX="424.0" layoutY="14.0" mnemonicParsing="false" text="Show Customers" />
+         <Button fx:id="sortPassButton" layoutX="437.0" layoutY="81.0" mnemonicParsing="false" text="Sort by Pass" />
+         <Button fx:id="searchButton" layoutX="451.0" layoutY="411.0" mnemonicParsing="false" text="Search" />
+         <TextField fx:id="searchField" layoutX="402.0" layoutY="376.0" />
+         <Button fx:id="clearButton" layoutX="451.0" layoutY="231.0" mnemonicParsing="false" text="Clear" />
       </children>
    </AnchorPane>
 </VBox>

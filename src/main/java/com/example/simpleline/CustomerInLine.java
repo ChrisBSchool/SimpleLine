@@ -4,13 +4,16 @@ package com.example.simpleline;
 public class CustomerInLine extends Customer implements Comparable<CustomerInLine>{
     private int lineNum;
     private String pass;
+    private String name;
 
     public CustomerInLine(String name,int lineNum,String pass) {
         super(name);
         this.lineNum = lineNum;
         this.pass = pass;
     }
-
+    //public String getName(){
+    //    return name;
+    //};
     public int getLineNum(){
         return lineNum;
     }

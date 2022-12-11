@@ -7,6 +7,8 @@
 // **********************************************************************************
 package com.example.simpleline;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -30,12 +32,25 @@ public class HelloApplication extends Application {
         //Note part one does not use the listview, I was just going to use the 2d array, but instead the linked list from part 2 will be used to populate it, part one sort is displayed via system out
         FileControl newFile = new FileControl();
         MrSorter newSort = new MrSorter();
-
+        HashControl newHash = new HashControl();
+        //MultiThreader newThreader = new MultiThreader();
         System.out.println(newFile.lineCount("src/Customers.txt"));
         System.out.println(Arrays.deepToString(newFile.readInCustomers("src/Customers.txt")));
         System.out.println(Arrays.deepToString(newSort.customerSort(newFile.readInCustomers("src/Customers.txt"))));
         System.out.println(LineControl.customerInLineLinkedList((newSort.customerSort(newFile.readInCustomers("src/Customers.txt")))));
         System.out.println(LineControl.customerInLinePriortyQueue((newSort.customerSort(newFile.readInCustomers("src/Customers.txt")))));
+        System.out.println(newHash.makeHash(LineControl.customerInLineLinkedList((newSort.customerSort(newFile.readInCustomers("src/Customers.txt"))))));
+        System.out.println(newHash.searchHash(newHash.makeHash(LineControl.customerInLineLinkedList((newSort.customerSort(newFile.readInCustomers("src/Customers.txt"))))),"Mark Doe"));
+        MultiThreader newThreader = new MultiThreader();//(LineControl.customerInLinePriortyQueue((newSort.customerSort(newFile.readInCustomers("src/Customers.txt")))),LineControl.customerInLineLinkedList((newSort.customerSort(newFile.readInCustomers("src/Customers.txt")))));
+        //newThreader.threadControl();
+        //Thread test = new Thread(newThreader);
+        System.out.println(newThreader.getThreadedList());
+        System.out.println(newThreader.getPQueue());
         launch();
     }
+
+    //@Override
+    //public void handle(ActionEvent event) {
+      //  if(event.getSource()==sort)
+    //}
 }
