@@ -1,0 +1,6 @@
+John Doe,0001,no pass
+Bill Doe,0002,has pass
+Steve Doe,0003,no pass
+John Doe,0001,no pass
+Bill Doe,0002,has pass
+Steve Doe,0003,no pass
